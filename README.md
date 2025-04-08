@@ -39,7 +39,7 @@ Install all dependencies plugins (e.g., **Git, Docker, Jenkins, Trivy, Kubectl, 
 Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Eclipse Temurin Installer, SonarQube Scanner, NodeJs, docker pipeline, owasp dependency check Plugin, slack notification and splunk**) 
 
 [Dependencies-jenkins-plugins](docs/jenkins-plugins.md)
-
+[kops-setup](docs/kops-setup.md)
 ---
 
 ### 🔐 Pass the Credentials in Jenkins
