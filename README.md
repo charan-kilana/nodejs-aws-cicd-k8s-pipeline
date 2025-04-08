@@ -81,7 +81,7 @@ Create a production-grade Kubernetes cluster on AWS using KOPS.
 
 [kops-setup](docs/kops-setup.md)
 
-[kops_Cluster](docs/assets/kops.png)
+![kops_Cluster](docs/assets/kops.png)
 
 ---
 
