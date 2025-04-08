@@ -35,8 +35,8 @@ Below are the key steps involved in the complete setup of the Node.js CI/CD pipe
 ---
 
 ### ✅ Install Dependencies and Plugins for Jenkins
-Install all dependencies plugins (e.g., Git, Docker, Jenkins, Trivy, Kubectl, kops, etc.).
-Install all plugins required for Jenkins pipeline. (e.g., docker-pipeline, Eclipse Temurin Installer, SonarQube Scanner, NodeJs, docker pipeline, owasp dependency check Plugin, slack notification and splunk) 
+Install all dependencies plugins (e.g., **Git, Docker, Jenkins, Trivy, Kubectl, kops,** etc.).
+Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Eclipse Temurin Installer, SonarQube Scanner, NodeJs, docker pipeline, owasp dependency check Plugin, slack notification and splunk**) 
 
 [Dependencies-jenkins-plugins](docs/jenkins-plugins.md)
 
