@@ -40,7 +40,7 @@ Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Ecl
 
 [Dependencies-plugins](docs/dependencies.md)  
 [kops-setup](docs/kops-setup.md)  
-[plugins-setup](docs/jenkins-plugin.md)  
+[plugins-setup](docs/jenkins-plugins.md)  
 
 
 ---
