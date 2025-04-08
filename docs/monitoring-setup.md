@@ -75,4 +75,12 @@ kubectl get pods -n grafana
 kubectl get service -n grafana
 ```
 
+# Access the Grafana Dashboard
+![Grafana Login](assets/grafana_elb.png)
+
+# Login page of grafana  
 Copy the EXTERNAL-IP of service and paste in browser
+![Grafana Login](assets/grafana_login.png)
+
+Copy the EXTERNAL-IP of service and paste in browser
+
