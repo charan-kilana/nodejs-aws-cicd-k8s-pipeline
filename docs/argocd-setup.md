@@ -42,10 +42,10 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ## 
 Create a app
-![New app](docs/assets/argo_new_app.png)
+![New app](docs/assets/argo_new_app.png)  
 
 Give details
-| N |  |  |
+|  |  |  |
 |--------------------|-------------------|-----------------|
 | ![D1](assets/argo1.png) | ![D2](assets/argo2.png) | ![D3](assets/argo3.png) |
 
