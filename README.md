@@ -115,5 +115,10 @@ Configure Prometheus and Grafana for monitoring and alerting.
 
 📄 [monitoring-setup.md](docs/monitoring-setup.md)
 
+### 🎉 Hurray! I Implemented the Grafana Dashboard
+
+Below is a preview of the configured dashboard using **Prometheus** as the data source:
+
+![Data Source: Prometheus](docs/assets/grafana_dashboard.png)
 ---
 
