@@ -5,76 +5,103 @@ You can create a new Jenkins pipeline job by using the following Jenkinsfile str
 ```bash
 pipeline {
     agent any
+
     tools {
         jdk 'jdk17'
-        nodejs 'node16'
+        nodejs 'nodejs'
     }
+
     environment {
-        SCANNER_HOME=tool 'mysonar'
+        SCANNER_HOME = tool 'mysonar'
     }
+
     stages {
-        stage ("Clean") {
+        stage("Clean") {
             steps {
                 cleanWs()
             }
         }
-        stage ("Code") {
+
+        stage("Code") {
             steps {
-                git branch: 'main', url: 'https://github.com/devops0014/Zomato-Repo.git'
+                git branch: 'main', url: 'https://github.com/charan-kilana/nodejs-aws-cicd-k8s-pipeline.git'
             }
         }
+
         stage("Sonarqube Analysis") {
-            steps{
+            steps {
                 withSonarQubeEnv('mysonar') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=zomato \
-                    -Dsonar.projectKey=zomato '''
+                    sh '''
+                        ${SCANNER_HOME}/bin/sonar-scanner \
+                        -Dsonar.projectName=zomato \
+                        -Dsonar.projectKey=zomato
+                    '''
                 }
             }
         }
-        stage ("Quality Gates") {
+
+        stage("Quality Gates") {
             steps {
                 script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-password'
                 }
             }
         }
-        stage ("Install dependencies") {
+
+        stage("Install dependencies") {
             steps {
                 sh 'npm install'
             }
         }
-        stage ("OWASP") {
+
+        stage("OWASP") {
             steps {
                 dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'Dp-Check'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
             }
         }
-        stage ("Trivy scan") {
+
+        stage("Trivy scan") {
             steps {
-                sh "trivy fs . > trivyfs.txt"
+                sh 'trivy fs . > trivyfs.txt'
             }
         }
-        
-        stage ("Build Dockerfile") {
+
+        stage("Build Dockerfile") {
             steps {
                 sh 'docker build -t image1 .'
             }
         }
-        stage("Docker Build & Push"){
-            steps{
-                script{
-                    withDockerRegistry(credentialsId: 'docker-password') {
-                        sh "docker tag image1 charan-kilana/zomatocharan:mydockerimage"
-                        sh "docker push charan-kilana/zomatocharan:mydockerimage"
+
+        stage("Docker Build & Push") {
+            steps {
+                script {
+                    withDockerRegistry(credentialsId: 'DockerHub-Credentials') {
+                        sh 'docker tag image1 charansuryakilana/zomato:mydockerimage'
+                        sh 'docker push charansuryakilana/zomato:mydockerimage'
                     }
                 }
             }
         }
-        stage ("Scan image") {
+
+        stage("Scan image") {
             steps {
-                sh 'trivy image charan-kilana/zomatocharan:mydockerimage'
+                sh 'trivy image charansuryakilana/zomato:mydockerimage'
             }
         }
     }
+
+    post {
+        always {
+            echo 'Slack Notifications'
+            slackSend (
+                channel: '#ezdeploy-prototype',
+                message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} \n" +
+                         "Build ${env.BUILD_NUMBER} \n" +
+                         "More info at: ${env.BUILD_URL}"
+            )
+        }
+    }
 }
+
 ```
