@@ -38,7 +38,7 @@ Below are the key steps involved in the complete setup of the Node.js CI/CD pipe
 Install all dependencies plugins (e.g., **Git, Docker, Jenkins, Trivy, Kubectl, kops,** etc.).
 Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Eclipse Temurin Installer, SonarQube Scanner, NodeJs, docker pipeline, owasp dependency check Plugin, slack notification and splunk**) 
 
-# Step-1
+# Step-1 Installation of dependencies & Pipeline Setup
 [Dependencies-plugins](docs/dependencies.md)  
 
 | kops prerequisties |  Jnekins, git, Docker, Trivy | 
@@ -46,17 +46,19 @@ Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Ecl
 | ![Kops](docs/assets/kops_pre.png) | ![versions](docs/assets/versions.png) |
 
 
-# Step-2
+# Step-2 kops setup
 [kops-setup](docs/kops-setup.md)  
+
 ![kops_Cluster](docs/assets/kops.png)
 
-# Step-3
+# Step-3 Jenkins Plugins Installation
 [plugins-setup](docs/jenkins-plugins.md)  
+
 ![plugins](docs/assets/plugins.png) |
 
 ---
-# Step-4
-### 🔐 Pass the Credentials in Jenkins
+# Step-4 Pass the Credentials in Jenkins
+###
 Create credentials in Jenkins for:
 - GitHub access
 - DockerHub authentication
@@ -66,8 +68,8 @@ Create credentials in Jenkins for:
 [jenkins-credentials-setup.md](docs/jenkins-credentials-setup.md)
 
 ---
-# Step-5
-### 🔁 Build CI/CD Pipeline
+# Step-5 Build CI/CD Pipeline
+###
 Implement Jenkins pipeline covering:
 - GitHub clone
 - SonarQube analysis
