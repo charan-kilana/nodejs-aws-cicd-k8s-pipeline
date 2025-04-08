@@ -35,3 +35,63 @@ CREATE IAM USER WITH ADMIN PERMISSIONS AND CONFIGURE IT IN ANY REGION WITH TABLE
 ```bash
 aws configure
 ```
+- **Create Infra Setup** –
+
+## TO CREATE BUCKET:
+```bash
+aws s3api create-bucket --bucket charan.k8s.local --region us-east-1
+ ```
+## TO ENABLE VERSION:
+Go into AWS console and enable versioning for your bucket
+
+## EXPORT CLUSTER DATA INTO BUCKET:
+```bash
+export KOPS_STATE_STORE=s3://charan.k8s.local
+```
+
+## GENERATE-KEY:
+```bash
+ssh-keygen
+```
+
+## TO CREATE CLUSTER:
+```bash
+kops create cluster --name charan.k8s.local --zones us-east-1a --master-size t2.medium --node-size t2.medium
+```
+
+## View the cluster:
+```bash
+kops get cluster
+```
+
+## TO RUN THE CLUSTER
+```bash
+kops update cluster --name charan.k8s.local --yes --admin
+```
+## Note: To create cluster it usually takes upto 10-15 minutes.
+> ### 📝 Note:
+> Useful `kops` commands for managing your Kubernetes cluster:
+>
+> - List clusters:  
+>   `kops get cluster`
+>
+> - Edit cluster config:  
+>   `kops edit cluster charan.k8s.local`
+>
+> - Edit **node** instance group:  
+>   `kops edit ig --name=charan.k8s.local nodes-us-east-1a`
+>
+> - Edit **master** instance group:  
+>   `kops edit ig --name=charan.k8s.local master-us-east-1a`
+>
+> - Delete the cluster:  
+>   `kops delete cluster --name cluster-name --yes`
+
+
+
+
+
+
+
+
+  
