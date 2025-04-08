@@ -25,7 +25,7 @@ Ensure the following tools are installed and configured on your system:
 	sudo ./aws/install
 	/usr/local/bin/aws --version
 	vim .bashrc
-  export PATH=$PATH:/usr/local/bin/
+  	export PATH=$PATH:/usr/local/bin/
 	source .bashrc
   ```
 Installation guide: [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
