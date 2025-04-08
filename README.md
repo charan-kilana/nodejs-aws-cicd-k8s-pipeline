@@ -92,7 +92,6 @@ Implement Jenkins pipeline covering:
 
 ### Slack Integration for pipeline status
 Slack Integration is pretty straight forward.  
-[Jenkinsfile](docs/slackandsplunk.pdf)  
 
 ![Slack Integration](docs/assets/slack_integ.png)
 
