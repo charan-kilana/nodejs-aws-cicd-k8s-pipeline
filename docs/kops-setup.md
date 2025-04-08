@@ -3,7 +3,19 @@
 **Kops setup referece:**
 [Install kops](https://github.com/charan-surya-kilana/all-setups/blob/master/kops.sh)
 
+Installation guide: [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)  
+After installing the AWS CLI, configure it using the following command:  
+CREATE IAM USER WITH ADMIN PERMISSIONS AND CONFIGURE IT IN ANY REGION WITH TABLE FORMAT  
+```bash
+aws configure
+```
+
 Ensure the following tools are installed and configured on your system:
+```bash
+vim .bashrc
+export PATH=$PATH:/usr/local/bin/
+source .bashrc
+```
 
 - **kubectl** – Command-line tool for interacting with Kubernetes clusters.
    ```bash
@@ -20,18 +32,6 @@ Ensure the following tools are installed and configured on your system:
   sudo mv kops /usr/local/bin/kops
   ```
   Installation guide: [Install kops](https://kops.sigs.k8s.io/getting_started/install/)
-
-- **AWS CLI** – Command-line tool for working with AWS services.
-  ```bash
-  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-  unzip awscliv2.zip
-  sudo ./aws/install
-  /usr/local/bin/aws --version
-  vim .bashrc
-  export PATH=$PATH:/usr/local/bin/
-  source .bashrc
-  ```
-Installation guide: [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
 After installing the AWS CLI, configure it using the following command:  
 CREATE IAM USER WITH ADMIN PERMISSIONS AND CONFIGURE IT IN ANY REGION WITH TABLE FORMAT
@@ -59,7 +59,7 @@ ssh-keygen
 
 ## TO CREATE CLUSTER:
 ```bash
-kops create cluster --name charan.k8s.local --zones us-east-1a --master-size t2.medium --node-size t2.medium
+kops create cluster --name charan.k8s.local --zones us-east-1a --master-count=1 --master-size t2.medium --node-count=2 --node-size t2.medium
 ```
 
 ## View the cluster:
