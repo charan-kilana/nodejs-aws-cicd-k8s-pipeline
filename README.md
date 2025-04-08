@@ -57,7 +57,8 @@ Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Ecl
 ![plugins](docs/assets/plugins.png) 
 
 ---
-# Step-4 Pass the Credentials in Jenkins
+
+# Step-3 Pass the Credentials in Jenkins
 ###
 Create credentials in Jenkins for:
 - GitHub access (If private)
@@ -68,7 +69,8 @@ Create credentials in Jenkins for:
 ![credentials](docs/assets/cred.png) 
 
 ---
-# Step-5 Build CI/CD Pipeline
+
+# Step-4 Build CI/CD Pipeline
 ###
 Implement Jenkins pipeline covering:
 - GitHub clone
@@ -87,10 +89,9 @@ Implement Jenkins pipeline covering:
 |--------------------|-------------------|-----------------|
 | ![Stages](docs/assets/p1.png) | !![Stages](docs/assets/p1.png) | ![Stages](docs/assets/p1.png) |
 
-
 ---
 
-### Slack Integration for pipeline status
+### Step-5 Slack Integration for pipeline status
 Slack Integration is pretty straight forward.  
 
 ![Slack Integration](docs/assets/slack_integ.png)
@@ -99,12 +100,11 @@ Slack Integration is pretty straight forward.
 
 ---
 
-### 🚀 ArgoCD Setup for GitOps-based Deployment
+### Step-6 ArgoCD Setup for GitOps-based Deployment
 Install ArgoCD and configure it to auto-sync with Helm charts for app deployment.
 
 📄 [argocd-setup.md](docs/argocd-setup.md)
 
----
 
 ## 🎉 Hurray! Application Deployed Successfully
 
@@ -112,8 +112,9 @@ You should now see the application UI live!
 
 ![HURRAY](docs/assets/final_app_UI.png)
 
+---
 
-### 📊 Setup Monitoring
+### Step-7 Setup Monitoring
 Configure Prometheus and Grafana for monitoring and alerting.
 
 📄 [monitoring-setup.md](docs/monitoring-setup.md)
