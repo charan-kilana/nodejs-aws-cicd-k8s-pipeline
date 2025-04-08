@@ -79,7 +79,9 @@ Implement Jenkins pipeline covering:
 ### ☸️ Install and Setup KOPS Cluster
 Create a production-grade Kubernetes cluster on AWS using KOPS.
 
-[kops-setup.md](docs/kops-setup.md)
+[kops-setup](docs/kops-setup.md)
+
+[kops_Cluster](docs/assets/kops.png)
 
 ---
 
