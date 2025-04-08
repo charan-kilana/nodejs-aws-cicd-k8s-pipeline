@@ -64,20 +64,15 @@ pipeline {
             steps{
                 script{
                     withDockerRegistry(credentialsId: 'docker-password') {
-                        sh "docker tag image1 shaikmustafa/loki:mydockerimage"
-                        sh "docker push shaikmustafa/loki:mydockerimage"
+                        sh "docker tag image1 charan-kilana/zomatocharan:mydockerimage"
+                        sh "docker push charan-kilana/zomatocharan:mydockerimage"
                     }
                 }
             }
         }
         stage ("Scan image") {
             steps {
-                sh 'trivy image shaikmustafa/loki:mydockerimage'
-            }
-        }
-        stage ("Deploy") {
-            steps {
-                sh 'docker run -d --name zomato -p 3000:3000 shaikmustafa/loki:mydockerimage'
+                sh 'trivy image charan-kilana/zomatocharan:mydockerimage'
             }
         }
     }
