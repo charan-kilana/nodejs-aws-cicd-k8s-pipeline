@@ -41,16 +41,18 @@ Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Ecl
 # Step-1
 [Dependencies-plugins](docs/dependencies.md)  
 
-| kops prerequisties | plugins for Jenkins | 
+| kops prerequisties |  Jnekins, git, Docker, Trivy | 
 |--------------------|-------------------|
-| ![Kops](docs/assets/kops_pre.png) | ![plugins](docs/assets/plugins.png) |
+| ![Kops](docs/assets/kops_pre.png) | ![versions](docs/assets/versions.png) |
 
 
 # Step-2
 [kops-setup](docs/kops-setup.md)  
+![kops_Cluster](docs/assets/kops.png)
+
 # Step-3
 [plugins-setup](docs/jenkins-plugins.md)  
-
+![plugins](docs/assets/plugins.png) |
 
 ---
 # Step-4
@@ -78,16 +80,6 @@ Implement Jenkins pipeline covering:
 - Slack integration
 
 [Jenkinsfile](docs/Jenkinsfile.md)
-
----
-
-# Step-6
-### ☸️ Install and Setup KOPS Cluster
-Create a production-grade Kubernetes cluster on AWS using KOPS.
-
-[kops-setup](docs/kops-setup.md)
-
-![kops_Cluster](docs/assets/kops.png)
 
 ---
 
