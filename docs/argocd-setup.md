@@ -44,14 +44,27 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 Create a app
 ![New app](assets/argo_new_app.png)  
 
-Give details
+When you're specifying the repository name in ArgoCD,  
+navigate to the `manifest/` directory and verify that it contains the deployment files.
+![Deploymentt File](assets/deployment_file.png)
+
+Give details  
+When you're connecting the Git repository in ArgoCD:
+
+1. Set the **repository URL**.
+2. Use `manifest` as the **path**.
+3. Confirm the manifest files (e.g., `deployment.yaml`and  `service.yaml`) exist in the same folder.
+
 |  |  |  |
 |--------------------|-------------------|-----------------|
 | ![D1](assets/argo1.png) | ![D2](assets/argo2.png) | ![D3](assets/argo3.png) |
 
 
+It will automatically sync and reach the **Healthy** state.  
+![Final_Healthy](assets/final.png)
 
 
+Go to svc and access the elb
 
 
 
