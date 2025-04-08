@@ -1,6 +1,6 @@
 ### ✅ Prerequisites
 
-## Kops setup referece:
+# Kops setup referece:
 [Install kops](https://github.com/charan-surya-kilana/all-setups/blob/master/kops.sh)
 
 Ensure the following tools are installed and configured on your system:
