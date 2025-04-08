@@ -28,11 +28,6 @@ Give permission to docker to build using the pipeline
 chmod 777 ///var/run/docker.sock
 ```
 
-### Setup KOPS Cluster
-
-Follow the steps to create and configure a Kubernetes cluster using **KOPS** on AWS.
-
-[kops cluster](kops-setup.md)
 
 
 
