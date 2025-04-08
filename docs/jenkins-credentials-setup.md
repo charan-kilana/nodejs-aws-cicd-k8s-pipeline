@@ -11,11 +11,14 @@ Go to:
 
 Set the following tool names and versions:
 
-- **JDK Name:** `jdk17` (jdk-17.0.8.1+1)  
-- **Node.js Name:** `node16` (NodeJs 16.2.0)  
-- **Dependency Check Name:** `Dp-check` (dependency-check 6.5.1)  
+- **JDK Name:** `jdk17` (jdk-17.0.8.1+1)
+![JDK version](assets/jdk.png)
+- **Node.js Name:** `node16` (NodeJs 16.2.0)
+![NodeJS](assets/nodejs.png)
+- **Dependency Check Name:** `Dp-check` (dependency-check 6.5.1)
+![dependency Check](assets/Dp-check.png)
 - **SonarQube Scanner Name:** `sonar-scanner` (SonarQube Scanner 5.0.1.3006)
-
+![SonarQube](assets/sonar.png)
 ---
 ## 🐳 Install SonarQube using Docker
 
@@ -24,7 +27,7 @@ You can install SonarQube using the official Docker image from Docker Hub:
 ```bash
 docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
 ```
-![Docker installation from DockerHubScreenshot](docs/sonar_install.png)
+![Docker installation from DockerHubScreenshot](assets/sonar_install.png)
 
 
 1. **Create a user in SonarQube**
