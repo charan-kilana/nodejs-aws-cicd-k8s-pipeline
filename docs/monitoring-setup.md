@@ -88,3 +88,38 @@ Copy the EXTERNAL-IP of service and paste in browser
 ![Data_source_Prometheus](assets/data_source_prome.png)
 
 
+### 🎉 Hurray! I Implemented the Grafana Dashboard
+
+Below is a preview of the configured dashboard using **Prometheus** as the data source:
+
+![Data Source: Prometheus](assets/grafana_dashboard.png)
+
+## 📊 Monitoring Setup: Ports & Metrics
+
+To enable effective monitoring through Grafana/Prometheus dashboards, ensure the following ports are exposed and accessible:
+
+---
+
+### 🔌 Port `315` — Cluster-Wide Metrics Monitoring
+
+This port is used to monitor overall **cluster performance**. It covers:
+
+- 📡 **Network I/O Pressure**
+- 💻 **Cluster CPU Usage**
+- 🧠 **Cluster Memory Usage**
+- 💾 **Cluster Filesystem Usage**
+- 🔄 **Pods CPU Usage**
+
+---
+
+### 🔌 Port `1860` — Per-Node Monitoring
+
+This port provides detailed metrics for **individual node performance**, allowing you to analyze node-level behavior and bottlenecks.
+
+---
+
+📍 Make sure these ports are either:
+- Exposed through **LoadBalancer/NodePort**, or
+- Included in your **monitoring security group rules (AWS EC2/KOPS)**
+
+
