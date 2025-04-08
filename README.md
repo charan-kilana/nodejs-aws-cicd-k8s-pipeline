@@ -40,6 +40,12 @@ Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Ecl
 
 # Step-1
 [Dependencies-plugins](docs/dependencies.md)  
+
+| kops prerequisties | plugins for Jenkins | 
+|--------------------|-------------------|
+| ![Kops](docs/assets/kops_pre.png) | ![plugins](docs/assets/plugins.png) |
+
+
 # Step-2
 [kops-setup](docs/kops-setup.md)  
 # Step-3
