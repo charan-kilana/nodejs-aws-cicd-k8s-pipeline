@@ -83,7 +83,13 @@ Implement Jenkins pipeline covering:
 
 [Jenkinsfile](docs/Jenkinsfile.md)
 
+
 ---
+
+### Slack Integration for pipeline status
+Slack Integration is pretty forward.
+![Slack Integration](docs/assets/slack_integration.png)
+![Slack Integration](docs/assets/slac_int.png)
 
 ### 🚀 ArgoCD Setup for GitOps-based Deployment
 Install ArgoCD and configure it to auto-sync with Helm charts for app deployment.
@@ -91,6 +97,13 @@ Install ArgoCD and configure it to auto-sync with Helm charts for app deployment
 📄 [argocd-setup.md](docs/argocd-setup.md)
 
 ---
+
+## 🎉 Hurray! Application Deployed Successfully
+
+You should now see the application UI live!
+
+![HURRAY](docs/assets/final_app_UI.png)
+
 
 ### 📊 Setup Monitoring
 Configure Prometheus and Grafana for monitoring and alerting.
