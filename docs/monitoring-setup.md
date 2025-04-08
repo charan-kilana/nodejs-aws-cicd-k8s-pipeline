@@ -83,7 +83,8 @@ Copy the EXTERNAL-IP of service and paste in browser
 ![Grafana Login](assets/grafana_login.png)
 
 
-# Add Datasource from prometheus and paste the link  "http://prometheus-server.prometheus.svc.cluster.local/"
+- Add Datasource from prometheus and paste the link  "http://prometheus-server.prometheus.svc.cluster.local/"  
+
 ![Data_source_Prometheus](assets/data_source_prome.png)
 
 
