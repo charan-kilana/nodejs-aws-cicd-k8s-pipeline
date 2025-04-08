@@ -64,7 +64,18 @@ It will automatically sync and reach the **Healthy** state.
 ![Final_Healthy](assets/final.png)
 
 
-Go to svc and access the elb
+## 🌐 Accessing the Application
 
+Go to the `Service` (svc) in your Kubernetes cluster and access the **ELB URL**.
+
+![ARGO_ELB](assets/argo_app_elb.png)
+
+---
+
+## 🎉 Hurray! Application Deployed Successfully
+
+You should now see the application UI live!
+
+![HURRAY](assets/final_app_UI.png)
 
 
