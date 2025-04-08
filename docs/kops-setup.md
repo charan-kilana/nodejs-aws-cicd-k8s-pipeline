@@ -21,12 +21,12 @@ Ensure the following tools are installed and configured on your system:
 - **AWS CLI** – Command-line tool for working with AWS services.
   ```bash
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-	unzip awscliv2.zip
-	sudo ./aws/install
-	/usr/local/bin/aws --version
-	vim .bashrc
-  	export PATH=$PATH:/usr/local/bin/
-	source .bashrc
+  unzip awscliv2.zip
+  sudo ./aws/install
+  /usr/local/bin/aws --version
+  vim .bashrc
+  export PATH=$PATH:/usr/local/bin/
+  source .bashrc
   ```
 Installation guide: [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
