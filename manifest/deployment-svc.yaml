@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: CICD-K8S
+  name: mydeployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: CICD-K8S
+      app: deployk8s
   template:
     metadata:
       labels:
-        app: CICD-K8S
+        app: deployk8s
     spec:
       containers:
-      - name: CICD-K8S-cont
-        image: charansuryakilana/ez_deploy_prototype:image1
+      - name: zomato
+        image: charansuryakilana/zomato:mydockerimage
         ports:
         - containerPort: 3000   # Use port 3000
 
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: CICD-K8S-service
+  name: mydeployment_svc
 spec:
   selector:
-    app: CICD-K8S
+    app: deployk8s
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
