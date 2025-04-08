@@ -61,6 +61,6 @@ kubectl get all -n prometheus
 helm install grafana grafana/grafana --namespace grafana --set persistence.storageClassName="gp2" --set persistence.enabled=true --set adminPassword='EKS!sAWSome' --set  service.type=LoadBalancer
 kubectl get pods -n grafana
 kubectl get service -n grafana
-```bash
+```
 
 Copy the EXTERNAL-IP of service and paste in browser
