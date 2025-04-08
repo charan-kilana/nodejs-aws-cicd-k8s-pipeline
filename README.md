@@ -87,9 +87,13 @@ Implement Jenkins pipeline covering:
 ---
 
 ### Slack Integration for pipeline status
-Slack Integration is pretty forward.
-![Slack Integration](docs/assets/slack_integration.png)
-![Slack Integration](docs/assets/slac_int.png)
+Slack Integration is pretty straight forward.  
+[Jenkinsfile](docs/slackandsplunk.pdf)  
+
+![Slack Integration](docs/assets/slack_integ.png)
+![Slack Notification](docs/assets/slac_not.png)
+
+---
 
 ### 🚀 ArgoCD Setup for GitOps-based Deployment
 Install ArgoCD and configure it to auto-sync with Helm charts for app deployment.
