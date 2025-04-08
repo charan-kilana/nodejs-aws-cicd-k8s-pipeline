@@ -30,7 +30,7 @@ Ensure the following tools are installed and configured on your system:
   ```
 Installation guide: [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
-After installing the AWS CLI, configure it using the following command:
+After installing the AWS CLI, configure it using the following command:  
 CREATE IAM USER WITH ADMIN PERMISSIONS AND CONFIGURE IT IN ANY REGION WITH TABLE FORMAT
 ```bash
 aws configure
