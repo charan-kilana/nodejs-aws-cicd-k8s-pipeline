@@ -83,6 +83,10 @@ Implement Jenkins pipeline covering:
 
 [Jenkinsfile](docs/Jenkinsfile.md)
 
+|  |  |  |
+|--------------------|-------------------|-----------------|
+| ![Stages](docs/assets/p1.png) | !![Stages](docs/assets/p1.png) | ![Stages](docs/assets/p1.png) |
+
 
 ---
 
