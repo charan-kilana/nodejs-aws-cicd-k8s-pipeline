@@ -45,6 +45,7 @@ Create a app
 ![New app](argo_new_app.png)
 
 Give details
+| Node.js Dockerfile | Python Dockerfile | GoLang Dockerfile |
 |--------------------|-------------------|-----------------|
 | ![D1](assets/argo1.png) | ![D2](assets/argo2.png) | ![D3](assets/argo3.png) |
 
