@@ -32,7 +32,7 @@ chmod 777 ///var/run/docker.sock
 
 Follow the steps to create and configure a Kubernetes cluster using **KOPS** on AWS.
 
-[kops cluster](docs/docs/kops-setup.md)
+[kops cluster](kops-setup.md)
 
 
 
