@@ -82,5 +82,8 @@ kubectl get service -n grafana
 Copy the EXTERNAL-IP of service and paste in browser
 ![Grafana Login](assets/grafana_login.png)
 
-Copy the EXTERNAL-IP of service and paste in browser
+
+# Add Datasource from prometheus and paste the link  "http://prometheus-server.prometheus.svc.cluster.local/"
+![Data_source_Prometheus](assets/data_source_prome.png)
+
 
