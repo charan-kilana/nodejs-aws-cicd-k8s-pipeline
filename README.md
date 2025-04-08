@@ -54,18 +54,18 @@ Install all plugins required for Jenkins pipeline. (e.g., **docker-pipeline, Ecl
 # Step-3 Jenkins Plugins Installation
 📄 [plugins-setup](docs/jenkins-plugins.md)  
 
-![plugins](docs/assets/plugins.png) |
+![plugins](docs/assets/plugins.png) 
 
 ---
 # Step-4 Pass the Credentials in Jenkins
 ###
 Create credentials in Jenkins for:
-- GitHub access
+- GitHub access (If private)
 - DockerHub authentication
 - SonarQube token
 - Slack Webhook (optional)
 
-📄 [jenkins-credentials-setup.md](docs/jenkins-credentials-setup.md)
+![credentials](docs/assets/cred.png) 
 
 ---
 # Step-5 Build CI/CD Pipeline
