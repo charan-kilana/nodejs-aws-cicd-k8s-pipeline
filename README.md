@@ -37,7 +37,7 @@ Below are the key steps involved in the complete setup of the Node.js CI/CD pipe
 ### ✅ Install Dependencies and Plugins for Jenkins
 Install all required Jenkins plugins (e.g., Git, Docker, Pipeline, Blue Ocean, etc.).
 
-📄 **Reference:** [jenkins-plugins.txt](docs/jenkins-plugins.md)
+[jenkins-plugins](docs/jenkins-plugins.md)
 
 ---
 
@@ -48,7 +48,7 @@ Create credentials in Jenkins for:
 - SonarQube token
 - Slack Webhook (optional)
 
-📄 **Reference:** [jenkins-credentials-setup.md](docs/jenkins-credentials-setup.md)
+[jenkins-credentials-setup.md](docs/jenkins-credentials-setup.md)
 
 ---
 
@@ -61,28 +61,28 @@ Implement Jenkins pipeline covering:
 - DockerHub push
 - Slack/Splunk integration (optional)
 
-📄 **Reference:** [Jenkinsfile](docs/Jenkinsfile)
+[Jenkinsfile](docs/Jenkinsfile.md)
 
 ---
 
 ### ☸️ Install and Setup KOPS Cluster
 Create a production-grade Kubernetes cluster on AWS using KOPS.
 
-📄 **Reference:** [kops-setup.md](docs/kops-setup.md)
+[kops-setup.md](docs/kops-setup.md)
 
 ---
 
 ### 🚀 ArgoCD Setup for GitOps-based Deployment
 Install ArgoCD and configure it to auto-sync with Helm charts for app deployment.
 
-📄 **Reference:** [argocd-setup.md](docs/argocd-setup.md)
+[argocd-setup.md](docs/argocd-setup.md)
 
 ---
 
 ### 📊 Setup Monitoring
 Configure Prometheus and Grafana for monitoring and alerting.
 
-📄 **Reference:** [monitoring-setup.md](docs/monitoring-setup.md)
+[monitoring-setup.md](docs/monitoring-setup.md)
 
 ---
 
