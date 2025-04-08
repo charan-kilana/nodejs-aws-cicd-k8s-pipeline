@@ -8,8 +8,7 @@ This section explains how to install and configure **Prometheus** and **Grafana*
 
 [Helm](https://helm.sh/docs/intro/install/) is a package manager for Kubernetes and is required to install Prometheus and Grafana via Helm charts.
 
-```bash
-```
+
 
 ## 📈 Install Kubernetes Metrics Server
 
@@ -55,10 +54,23 @@ kubectl get all -n prometheus
 ```
 
  ### CREATE GRAFANA NAMESPACE:
+# Add grafana repo
+ ```bash
+helm repo add grafana https://grafana.github.io/helm-charts
+```
  
  # kubectl create namespace grafana
  ```bash
-helm install grafana grafana/grafana --namespace grafana --set persistence.storageClassName="gp2" --set persistence.enabled=true --set adminPassword='EKS!sAWSome' --set  service.type=LoadBalancer
+helm install grafana grafana/grafana \
+  --namespace grafana \
+  --create-namespace \
+  --set persistence.enabled=true \
+  --set persistence.storageClassName="gp2" \
+  --set adminPassword='EKS!sAWSome' \
+  --set service.type=LoadBalancer
+```
+- The password to access the grafana dashboard is ***EKS!sAWSome***  
+```bash
 kubectl get pods -n grafana
 kubectl get service -n grafana
 ```
