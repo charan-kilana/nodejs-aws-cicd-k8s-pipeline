@@ -1,5 +1,8 @@
 ### ✅ Prerequisites
 
+## Kops setup referece:
+[Install kops](https://github.com/charan-surya-kilana/all-setups/blob/master/kops.sh)
+
 Ensure the following tools are installed and configured on your system:
 
 - **kubectl** – Command-line tool for interacting with Kubernetes clusters.
