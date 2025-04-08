@@ -61,3 +61,7 @@ Add:
 - **Version:** `dependency-check 6.5.1`  
 - **Source:** GitHub or internal mirror
 
+# Integrate sonarqube credentials 
+# Pass DockerHub credentials
+# Pass slack Credentials
+# Pass splunk Credentials
