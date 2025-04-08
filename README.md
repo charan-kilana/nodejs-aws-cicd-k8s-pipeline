@@ -28,3 +28,61 @@ The deployment pipeline includes the following stages:
 
 > All steps are automated to ensure smooth, secure, and continuous delivery of the application to a Kubernetes cluster managed with KOPS on AWS.
 
+## 🔧 Setup Instructions
+
+Below are the key steps involved in the complete setup of the Node.js CI/CD pipeline on AWS with Kubernetes, Jenkins, ArgoCD, and monitoring.
+
+---
+
+### ✅ Install Dependencies and Plugins for Jenkins
+Install all required Jenkins plugins (e.g., Git, Docker, Pipeline, Blue Ocean, etc.).
+
+📄 **Reference:** [jenkins-plugins.txt](docs/jenkins-plugins.md)
+
+---
+
+### 🔐 Pass the Credentials in Jenkins
+Create credentials in Jenkins for:
+- GitHub access
+- DockerHub authentication
+- SonarQube token
+- Slack Webhook (optional)
+
+📄 **Reference:** [jenkins-credentials-setup.md](docs/jenkins-credentials-setup.md)
+
+---
+
+### 🔁 Build CI/CD Pipeline
+Implement Jenkins pipeline covering:
+- GitHub clone
+- SonarQube analysis
+- OWASP check
+- Docker build and scan
+- DockerHub push
+- Slack/Splunk integration (optional)
+
+📄 **Reference:** [Jenkinsfile](docs/Jenkinsfile)
+
+---
+
+### ☸️ Install and Setup KOPS Cluster
+Create a production-grade Kubernetes cluster on AWS using KOPS.
+
+📄 **Reference:** [kops-setup.md](docs/kops-setup.md)
+
+---
+
+### 🚀 ArgoCD Setup for GitOps-based Deployment
+Install ArgoCD and configure it to auto-sync with Helm charts for app deployment.
+
+📄 **Reference:** [argocd-setup.md](docs/argocd-setup.md)
+
+---
+
+### 📊 Setup Monitoring
+Configure Prometheus and Grafana for monitoring and alerting.
+
+📄 **Reference:** [monitoring-setup.md](docs/monitoring-setup.md)
+
+---
+
