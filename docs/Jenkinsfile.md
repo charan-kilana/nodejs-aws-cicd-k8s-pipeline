@@ -1,5 +1,7 @@
-# Create a pipeline job
-insert this code:
+## 🛠️ Create a Pipeline Job
+
+You can create a new Jenkins pipeline job by using the following Jenkinsfile structure:
+
 ```bash
 pipeline {
     agent any
